@@ -3,7 +3,7 @@ layout: post
 title: Spring Security shared secret authentication for microservices 
 ---
 
-This is a demo of all styled elements in Jekyll Now.
+So we all are building microservices, now. Provides rest api's that enables other micoservices to  
 
 ## The problem
 
