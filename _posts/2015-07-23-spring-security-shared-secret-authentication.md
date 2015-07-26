@@ -3,7 +3,7 @@ layout: post
 title: Spring Security shared secret authentication for microservices 
 ---
 
-So we all are building microservices, now. Provides rest api's that enables other micoservices to  
+So we all are building microservices, now. Most of them provides rest api's that enables other ones to perform actions. One day we are realising that allowing everybody to access an endpoint may lead to security breach. In this article I will show how we can quickly add a shared secret based security.        
 
 ## The problem
 
