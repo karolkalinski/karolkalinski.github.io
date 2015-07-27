@@ -11,3 +11,5 @@ In our enterprise application we have two microservices that cooperate together 
 
 ## The easiest solution
 The easiest solution I have encoutured few times is to allow access only from selected hosts by providing thiers ip adresses in the endpoint security configuration. In order to enable such way of protection in micro-infra-spring based microservice all we have to do is to add a spring security on its classpath and adapt the default Spring Boot security configuration. More info on adding spring security to Spring Based web application can be found here: [Securing a Web Application](https://spring.io/guides/gs/securing-web/ "Securing a Web Application"). Adapting the configuration is even easier:
+
+If you want to be super-paranoid safe, see: org.springframework.security.crypto.bcrypt.BCrypt#checkpw and https://en.wikipedia.org/wiki/Timing_attack
