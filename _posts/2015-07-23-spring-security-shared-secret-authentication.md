@@ -11,6 +11,7 @@ In our enterprise application we have two microservices that cooperate together 
 
 ## The easiest solution
 The easiest solution I have encoutured few times is to allow access only from selected hosts by providing thiers ip adresses in the endpoint security configuration. In order to enable such way of protection in micro-infra-spring based microservice all we have to do is to add [a spring security configuration](http://mvnrepository.com/artifact/org.springframework.security/spring-security-config/4.0.2.RELEASE) and [a spring secuirty web](http://mvnrepository.com/artifact/org.springframework.security/spring-security-web/4.0.2.RELEASE) to its dependencies and adapt the default Spring Boot security configuration. More info on adding spring security to Spring Based web application can be found here: [Securing a Web Application](https://spring.io/guides/gs/securing-web/ "Securing a Web Application"). Adapting the configuration is even easier:
+{% highlight java %}
 ```
 @Configuration
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
@@ -26,6 +27,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     }
 }
 ```
+{% endhighlight %}
 The code above tells spring security to allow access to all urls that matcher patern `/secret` from the local host (`::1` is ipv6 address for loopback). As far as we are going to create a session-less endpoint we should disable the CSFR, that is enabled by default for spring security set up by Java configuration. We achieve it by chaning `csfr` and `disable`. This solution has one huge disadvantage. Its not scalable at all.
 
 ##Plain text shared secret
