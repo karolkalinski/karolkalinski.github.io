@@ -34,5 +34,6 @@ Another very simple to implement technique, but with higer scalability is authen
 ## Advantages
 The authentication is performed in a single request without any redirection
 No artificial user is required for authentication for an endpoint
+Easy testable with MVC testing: https://spring.io/blog/2014/05/23/preview-spring-security-test-web-security
 
 If you want to be super-paranoid safe, see: org.springframework.security.crypto.bcrypt.BCrypt#checkpw and https://en.wikipedia.org/wiki/Timing_attack
