@@ -51,3 +51,5 @@ task bootRunDev(type: org.springframework.boot.gradle.run.BootRunTask) {
 }{% endhighlight %}
 
 Now when you command `./gradlew bootRunDev` in your projects directory, your spring-boot application will be run with `dev` profile activated.
+
+Source code of real life solution can be found [here](https://github.com/4finance/boot-microservice/commit/8f3c27b99376221c8cfbb019eda552eb87409563)
