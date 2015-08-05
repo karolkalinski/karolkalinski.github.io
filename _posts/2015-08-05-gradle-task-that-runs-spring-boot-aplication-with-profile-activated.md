@@ -34,12 +34,15 @@ In our new task configuration we need to add additional behaviour before task is
 }
 {% endhighlight %}
 The project property `mainClassName` was set up by one of the `bootRun` dependency the task `findMainClass`, that is a part of the `spring-boot-gradle-plugin` as well. If you take a look at lists of tasks executed before `bootRun`, this one will be there. 
+In order to make this task easy findable, you can assign it to the same predfined group as `bootRun`. To do his just add following line to the task configuration:
+`group = 'Application'`
 
 ## Configuring a task to set up system properties before execution
 The last thing, that is missing is seting up the active spring profiles. We achive it by adding `systemProperty "spring.profiles.active", "dev"` to closure passed to doFirst method. The final code generting new task should be like this:
 {% highlight groovy %}
 
 task bootRunDev(type: org.springframework.boot.gradle.run.BootRunTask) {
+	group = 'Application'
 	doFirst() {
 		main = project.mainClassName
 		classpath = sourceSets.main.runtimeClasspath
