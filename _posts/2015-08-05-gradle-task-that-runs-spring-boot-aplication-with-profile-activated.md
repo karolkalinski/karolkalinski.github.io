@@ -46,7 +46,7 @@ task bootRunDev(type: org.springframework.boot.gradle.run.BootRunTask) {
 	doFirst() {
 		main = project.mainClassName
 		classpath = sourceSets.main.runtimeClasspath
-		systemProperty "spring.profiles.active", "dev"
+		systemProperty 'spring.profiles.active', 'dev'
 	}
 }{% endhighlight %}
 
