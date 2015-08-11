@@ -14,7 +14,7 @@ Creating a task in gradle that extends another one is terrbile simple. The follo
 {% endhighlight %}
 In our case we would like to extend task `org.springframework.boot.gradle.run.BootRunTask` that is part of the `spring-boot-gradle-plugin`. This task runs the project with support for auto-detecting main class and reloading static resources. Lets choose `bootRunDev` name for out new task. Therefore the line to be placed in in your `build.gradle` shoud be:
 {% highlight groovy %}
-  task bootRunDev(type: org.springframework.boot.gradle.run.BootRunTask)
+  task bootRunDev(type: org.springframework.boot.gradle.run.BootRunTask, dependsOn: 'build')
 {% endhighlight %}
 The attemp to use this command to start application results in error:
 {% highlight vctreestatus %}
@@ -25,6 +25,13 @@ Execution failed for task ':execute'.
 > No main class specified
 {% endhighlight %}
 
+## Executing building process before task execution
+To be able to find a main class, we need to build an application beforhand. Therefore we should add dependency to `build` task. This changes our task definition into:
+{% highlight groovy %}
+  task bootRunDev(type: org.springframework.boot.gradle.run.BootRunTask)
+{% endhighlight %}
+
+
 ## Configuring a task to set up main class name and classpath before execution
 In our new task configuration we need to add additional behaviour before task is executed. We add this by calling method `doFirst` with following closure:
 {% highlight groovy %}
@@ -34,14 +41,14 @@ In our new task configuration we need to add additional behaviour before task is
 }
 {% endhighlight %}
 The project property `mainClassName` was set up by one of the `bootRun` dependency the task `findMainClass`, that is a part of the `spring-boot-gradle-plugin` as well. If you take a look at lists of tasks executed before `bootRun`, this one will be there. 
-In order to make this task easy findable, you can assign it to the same predfined group as `bootRun`. To do his just add following line to the task configuration:
+In order to make the new task easy findable, you can assign it to the same predfined group as `bootRun`. To do his just add following line to the task configuration:
 `group = 'Application'`
 
 ## Configuring a task to set up system properties before execution
 The last thing, that is missing is seting up the active spring profiles. We achive it by adding `systemProperty "spring.profiles.active", "dev"` to closure passed to doFirst method. The final code generting new task should be like this:
 {% highlight groovy %}
 
-task bootRunDev(type: org.springframework.boot.gradle.run.BootRunTask) {
+task bootRunDev(type: org.springframework.boot.gradle.run.BootRunTask, dependsOn: 'build') {
 	group = 'Application'
 	doFirst() {
 		main = project.mainClassName
