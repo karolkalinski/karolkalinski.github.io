@@ -14,7 +14,7 @@ Creating a task in gradle that extends another one is terrbile simple. The follo
 {% endhighlight %}
 In our case we would like to extend task `org.springframework.boot.gradle.run.BootRunTask` that is part of the `spring-boot-gradle-plugin`. This task runs the project with support for auto-detecting main class and reloading static resources. Lets choose `bootRunDev` name for out new task. Therefore the line to be placed in in your `build.gradle` shoud be:
 {% highlight groovy %}
-  task bootRunDev(type: org.springframework.boot.gradle.run.BootRunTask, dependsOn: 'build')
+  task bootRunDev(type: org.springframework.boot.gradle.run.BootRunTask)
 {% endhighlight %}
 The attemp to use this command to start application results in error:
 {% highlight vctreestatus %}
@@ -26,9 +26,9 @@ Execution failed for task ':execute'.
 {% endhighlight %}
 
 ## Executing building process before task execution
-To be able to find a main class, we need to build an application beforhand. Therefore we should add dependency to `build` task. This changes our task definition into:
+To be able to find a main class, we need to build an application beforehand. Therefore we should add dependency to `build` task. This changes our task definition into:
 {% highlight groovy %}
-  task bootRunDev(type: org.springframework.boot.gradle.run.BootRunTask)
+  task bootRunDev(type: org.springframework.boot.gradle.run.BootRunTask, dependsOn: 'build')
 {% endhighlight %}
 
 
