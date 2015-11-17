@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Each time you inject a factory fairy tail dies
+title: Each time you inject a factory fairy tale dies
 ---
 
 We are accustomed to using design patterns to solve common problems. Factory is a very popular one. Are you sure, that your architecture is proper, when you inject a factory as a dependency to your component. I will try to prove, that it is not.
