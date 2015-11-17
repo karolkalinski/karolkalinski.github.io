@@ -73,5 +73,7 @@ public class UiGenerator {
 
 ## Sum up
 Injection factory brings at least two architectural smells to your. Avoid it, unless you have no human fillings to fairy tales. 
+
 Sample code can be found here [Don't inject factories at github](https://github.com/karolkalinski/dontinjectfactories)
+
 Inspired by [Demeter Saves Mocking Fairies](http://dearjunior.blogspot.com/2009/11/demeter-saves-mocking-fairies.html)
