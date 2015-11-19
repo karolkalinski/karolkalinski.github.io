@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Each time you inject a factory fairy tale dies
+title: Each time you inject a factory a fairy dies
 ---
 
 We are accustomed to using design patterns to solve common problems. Factory is a very popular one. Are you sure, that your architecture is proper, when you inject a factory as a dependency to your component. I will try to prove, that it is not.
@@ -11,7 +11,7 @@ The factory design pattern is a very popular design pattern used to hide the dep
 
 ## Law of Demeter
 
-[Law of Demeter](https://en.wikipedia.org/wiki/Law_of_Demeter) is a nearly 30 years old metric, that can be used to determine the coupling of the classes. In general it restricts the list of the objects, that can be called in a method. Lets apply it to the InterestRateCalculator#calculate method from the code below.
+[Law of Demeter](https://en.wikipedia.org/wiki/Law_of_Demeter) is a nearly 30 years old metric, that can be used to determine coupling of classes. In general it restricts the list of objects, that can be called in a method. Lets apply it to the InterestRateCalculator#calculate method from the code below.
 {% highlight java %}
 public class InterestRateCalculator {
     private RatePolicyFactory ratePolicyFactory;
@@ -27,7 +27,7 @@ public class InterestRateCalculator {
     }
 {% endhighlight %}
 
-In the first line the method is calling a method on object, that is its parameter. There is nothing to worry about. The problem is the second line we are working on the object, that is returned by a call in the first line. And this is against the law of Demeter. Therefore our code can not be considered to be loosely coupled.
+In the first line, the method is calling a method on object, that is its parameter. There is nothing to worry about. The problem is the second line we are working on the object, that is returned by a call in the first line. And this is against the law of Demeter. Therefore our code can not be considered to be loosely coupled.
       
 ## The solution
 
@@ -50,10 +50,10 @@ class TaxPolicyConfiguration {
 }   
 {% endhighlight %}
 
-We can restrict the visibility of the all classes here to package private. The exception is the TaxPolicy interface, that should has public visibility. So REALLY all creation details are hidden from consumer. Due to nature of the Spring components the scan method factory TaxPolicyConfiguration#taxPolicy for creating a tax policy instance would registered in bean factory.  Moreover the container takes resposibility to create the component when it is needed.
+We can restrict visibility of the all classes here to package private. The exception is the TaxPolicy interface, that should have public visibility. So REALLY all creation details are hidden from consumer. Due to nature of the Spring components the scan method factory TaxPolicyConfiguration#taxPolicy for creating a tax policy instance would registered in bean factory.  Moreover the container takes resposibility to create the component when it is needed.
 
 ## Statefull component - be careful
-If you are in need to create a statfull be carefull, there is probably sothing wrong with you archticture. I found another reason to discourage such a solution. There is no way to avoid calling the factory in case you would like to create prototype scope beans, that should be parametrized using a constructor. Look at the code below. There is no way to instate a bean without calling a method on injected.
+If you are in need to create a statfull component be careful, there is probably something wrong with your archticture. I found one more reason to discourage you from using such a solution. There is no way to avoid calling the factory in case you would like to create prototype scope beans, that should be parametrized using a constructor. Look at the code below. There is no way to instate a bean without calling a method on injected.
 
 {% highlight java %}
 Component
@@ -72,7 +72,7 @@ public class UiGenerator {
 {% endhighlight %}
 
 ## Sum up
-Injection factory brings at least two architectural smells to your. Avoid it, unless you have no human fillings to fairy tales. 
+Injection factory brings at least two architectural smells to your code. Avoid it, unless you have no human fillings to fairies. 
 
 Sample code can be found here [Don't inject factories at github](https://github.com/karolkalinski/dontinjectfactories)
 
