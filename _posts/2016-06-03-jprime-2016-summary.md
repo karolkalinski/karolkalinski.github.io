@@ -15,3 +15,5 @@ Worth mentioning is also talk [DI-Frameworks - the hidden pearls](https://bgjug.
 All of the talks where well prepared. And combine theory with a lot of practice in the area of the subject. The conference is great value to money. It costs about 80 EUR, but can easily compete with western Europe conferences in terms of quality. And worth seeing  BGJug logo can be seen [here](https://jprime.io/images/bg-jug.png). 
 
 The slides can be found here: https://jprime.io/nav/article/91
+
+All talks were live transmited and recorded. Here is the link to [youtube channel gathering them](https://www.youtube.com/watch?v=BSyuYujElno&list=PLcqA4DRMgIYsatRfZlIMGidBLJQpTtbGK). 
