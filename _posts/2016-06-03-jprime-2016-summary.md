@@ -1,9 +1,9 @@
 ---
 layout: post
-title: JPrime conference summary
+title: JPrime 2016 conference summary
 ---
 
-I have taken a part in [JPrime 2016](https://jprime.io/ "jprime home page") conference. 
+I have taken a part in [JPrime 2016](https://jprime.io/ "jprime home page") conference. Great event organized by [BUlgarian JUG](https://jug.bg/en/) in Sofia. 
 I have learnt a lot of RxJava, that was cover by nearly half of the talks. It is a Java library, that enables programmers to build responsive, resilient, scalable applications. It enables to declare a computation as a handling event from continuous stream. I have attended two talks on this topic.  There were two talks covering this topic. The first one covered the basic concepts and ideas, that drive RxJava named [Going Reactive with RxJava](https://speakerdeck.com/hcrnjak/going-reactive-with-rxjava-extended-at-jprime-sofia-2016). The second one showed the rxJava usage in an enterprise application to solve common performance issues. Its title was [RxJava in Microservices World](https://speakerdeck.com/pkafel/rxjava-in-microservices-world).  As its autor, Piotr Kafel, the RXJava is very addactive due to its nature of solving parallel computation problems in very attractive way.
 
 Another worth mentioning talk is Databases — the choice is yours by Philipp Krenn slides here: https://speakerdeck.com/xeraa/databases-the-choice-is-yours) . The speaker made a comprehensive comparison of main stream database models and its usage in enterprise application. He started what challenges drives its authors to develop new data models. Then move into topic of different types of schema flexibility. Showing difference on how the schema rigorous is.  The covers the topic of the hottest buzzwords, that is Big Data. He also dedicated few minutes to black sides of the ORM, when comes to inheritance. The solution for the issue becomes a MongoDb. The he showed how we can use Redis in enterprise application as a statistics database. He showed scalable and highly available database named Cassandra. The most important thought from the talk to remember is to use NoSql only when data consistency is not business critical. 
@@ -12,6 +12,6 @@ The very challenging talk was An incremental approach to Formal Methods in enter
 
 Worth mentioning is also talk [DI-Frameworks](https://bgjug.sty.bz/bgjug/jPrime/2016/slides/DI-Frameworks-the hidden pearls - Sven Ruppert.pdf) - the hidden pearls[]. A comprehensive guide to variety of dependency injection frameworks available on the market. I have learnt, that there is something besides Spring and this variety could be very useful. We can always find alternatives, that suits better our requirements. That is especially important, when dealing with microservice architecture. They can be more polyglot in terms of DI framework as well. 
  
-All of the talks where well prepared. And combine theory with a lot of practice in the area of the subject. The conference is great value to money. It costs about 80 EUR, but can easily compete with western Europe conferences in terms of quality. 
+All of the talks where well prepared. And combine theory with a lot of practice in the area of the subject. The conference is great value to money. It costs about 80 EUR, but can easily compete with western Europe conferences in terms of quality. And worth seeing  BGJug logo can be seen [here](https://jprime.io/images/bg-jug.png). 
 
 The slides can be found here: https://jprime.io/nav/article/91
