@@ -1,0 +1,47 @@
+Technology  
+Used technology guarantees decrease in the diversity of software used to develop systems. Lower diversity would increase mobility among team members. Moreover, it has positive impact on maintaining systems. Therefore, ubiquity is the key factor considered during software introduction process.
+The goal is to use popular technologies. To ensure, that huge surrounding community would ease its implementation and resolving own issue and would result in long living support. To enable this, we will follow market trends by looking at conference agendas and technology radars.
+Moreover, the chosen technology should be accompanied by variety of extensions (libraries, frameworks), that standardize developer works and speed up the process. These tools should promote good practices in writing code. A good example is Java language supported by Spring framework, that encourage developer to build maintainable code by design.
+On the other hand, we evaluate any emerging technologies to guarantee, that we use the best available tools. When we find the introduction of technology appropriate and confirm its maturity level, then we extend HL Tech stack with this technology. Any amendments are discussed with security and support teams.
+We work with solutions, that allows fully automated quality assurance. Including, but not limiting to many levels of testing (e.g. functional), software bug detection and identifying any security vulnerabilities. 
+Selected technologies provide modern user experience to internal and external customers. 
+When applicable we join community around the technology to extend it with required functionality.
+
+Architecture
+The shape of the architecture is driven by business goals. We are not making any assumptions on software requirements, that are not directly expressed by business.
+Successful architecture requires high usability. It ensures that the system allows those who interact with it to do so effectively. This includes end users, teams that would integrate with our services and support personnel. Moreover, that needs self-service attitude to building API and documentation.
+We adopt evolutionary architecture as an alternative to traditional up-front enterprise architectural designs. In order to achieve we need to define and constantly monitor architectural constrains.  Frequent refactoring of the applications should decrease the software change curve, that is ability to react quickly to request. 
+Architecture promotes clear information structure. Data is stored close to processes, that use it. As a result, there is a place for data duplication. To avoid any confusions all master sources of information are easily identifiable and provide mechanisms to notify about any changes.
+Architecture should allow teams to concentrate on development of a single feature without many integrations with other teams. To achieve this goal, we promote service oriented architecture, where responsibilities of each service are clearly defined.
+Cohesion is one of key architecture constraints. It is achieved by combining similar business functions into the same modules. 
+Architecture should response to any security concerns. Therefore, security is introduced as early as software engineering process starts. It is based on three pillars: confidentiality, integrity and availability.
+In collaboration with legacy systems we promote autonomous bubble pattern. This approach involves creating a fresh context for new application development that is bounded from the complications of the legacy world. 
+Every extension or change to the architecture must be evolution, that doesn't brake compatibility with current environment.
+One the aims of the architecture is to guarantee the reliability of the services and its high availability when required. In order to achieve we prefer stateless and asynchronous solutions over 
+Architecture decisions are supported by proof of concept stages, that allows to discover any drawbacks of the solution. Prototyping future solutions is part of design sprint. Any prototype is built and evaluated by a team made of architect and developers.
+All architectural decision are stored as a decision log.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
