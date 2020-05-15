@@ -1,1 +1,5 @@
 I was involved in a project with requirements, that make using AWS Lambda sensible approach. As a Java developer I was requested to leave my comfort zone and start developing in Java script. However I wanted to apply some techniques, that I am familiar with, that result in better code quality. These are types control and unit testing. 
+
+
+Notice:
+ it takes some time for files to be removed from AWS S3. In this case it was over an hour until it disappeared (could have been 6 hours, I stepped away for quite a bit)
