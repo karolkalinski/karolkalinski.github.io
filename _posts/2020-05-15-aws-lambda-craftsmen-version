@@ -3,3 +3,8 @@ I was involved in a project with requirements, that make using AWS Lambda sensib
 
 Notice:
  it takes some time for files to be removed from AWS S3. In this case it was over an hour until it disappeared (could have been 6 hours, I stepped away for quite a bit)
+
+Note od deleting files:
+Removes the null version (if there is one) of an object and inserts a delete marker, which becomes the latest version of the object. If there isn't a null version, Amazon S3 does not remove any objects.
+musisz chyba explicit podac versje jaka kasujesz - latest bo inaczej szuka null i nawet jak jej nie ma zwraca sukces
+dobrze rozumiem
