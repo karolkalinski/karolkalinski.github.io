@@ -9,7 +9,7 @@ The business requirement is to stop Hargreaves Lansdown employee from buying the
 
 ![ACL between CRM and Trading]({{ site.baseurl }}/images/ACLbetweenCRMandTrading.png)
 
-A service within CRM bounded context emits ClientUpdated event. This one is sent to a topic named after the event.  ACL within trading is subscribed to the topic.  On every event received it performs translation to one being part of trading's ubiquitous language.  It simple operation of extracting client identifier and checking if the client is an employee. This information is used to build a new command, that is DisableTradingForStock with related client id and hard coded stock ISIN. Command is then sent via message broker to service managing stock allowance for clients.
+A service within CRM bounded context emits ClientUpdated event. This one is sent to a topic named after the event.  ACL within trading is subscribed to the topic.  On every event received it performs translation to one being part of trading's ubiquitous language.  It simple operation of extracting client identifier and checking if the client is an employee. This information is used to build a new command, that is DisableTradingForStock with related client id and hard coded stock ISIN. Command is then sent via message broker to service managing stock allowance for investors.
 
 For example a _ClientUpdated_ event with following body
 ```
