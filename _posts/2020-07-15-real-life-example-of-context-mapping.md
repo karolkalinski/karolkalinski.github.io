@@ -17,7 +17,7 @@ For example a _ClientUpdated_ event with following body
   .... ,
   "isEmployee": true
 } 
-{% highlight %}
+{% endhighlight %}
 will be transformed into a DisableTradingForStock command with body:
 {% highlight json %}
 {"clientId":"1135921",
@@ -25,4 +25,4 @@ will be transformed into a DisableTradingForStock command with body:
   "stock": {
   "isin": "GB00B1VZ0M25"
 }
-{% highlight %}
+{% endhighlight %}
