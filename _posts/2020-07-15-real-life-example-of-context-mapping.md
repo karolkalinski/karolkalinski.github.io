@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Real life example of context mapping
