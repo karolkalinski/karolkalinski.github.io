@@ -1,0 +1,16 @@
+Processing unit ->Lambda
+
+Each processing unit instances holds a partitioned space instance and one or more services that are registered on events on that specific partition.
+Together they form an application cluster. If the cluster is required to be highly available, each primary partition has one or more backup partitions, 
+which run in their own processing unit instances. These instances are inactive, and become active only when their primary partition fails.
+
+Reources
+
+https://docs.gigaspaces.com/latest/overview/space-based-architecture.html
+https://www.slideshare.net/SureshPatidar2/spacebased-architecture
+
+
+Mark Richards:
+
+https://learning.oreilly.com/library/view/fundamentals-of-software/9781492043447/ch15.html
+https://learning.oreilly.com/library/view/software-architecture-patterns/9781491971437/ch05.html
