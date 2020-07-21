@@ -3,7 +3,7 @@ layout: post
 title: Real life example of context mapping
 ---
 
-I am challenged as a solution architect in my current project to deal with very complex business domain. In order to make our design manageable we apply Domain Driven Design (DDD) a lot. We still in the process of cutting the problem space into domains. However our core domain includes trade processing. One of generic domains is CRM.
+I am challenged as a solution architect in my current project to deal with very complex business domain. In order to make our design manageable we apply Domain Driven Design (DDD) a lot. We are carrying on with our long lasting process of cutting the problem space into domains. However our core domain includes trade processing. One of generic domains is CRM.
 
 The business requirement is to stop Hargreaves Lansdown employee from buying theirs employer shares. Its implementation requires integration between two domains mentioned above. In terms of DDD it is context mapping. There are many model of context mapping like shared kernel, customer-supplier just to name few. We don't want to spoil our trading platform context language with the concept of the employee. On the other hand we have So the obvious choice was to implement context mapping as an anti-corruption layer (ACL). 
 
